@@ -9,7 +9,7 @@ public class Lab13_Close_vs_quit {
         driver.get("https://google.com");
         Thread.sleep(5000);
 
-        //        driver.close();
+          // driver.close();
 //        // Close - will close the current tab, not the session (not the all tabs)
 //        // session id != null
 
