@@ -9,9 +9,11 @@ import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
+import java.util.concurrent.TimeUnit;
 import java.util.function.Function;
 
-public class Lab29_Wait_Helper {
+public class WaitHelpers {
+
     public static void waitJVM(int time) {
         try {
             Thread.sleep(time);
@@ -33,6 +35,7 @@ public class Lab29_Wait_Helper {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
     }
+
     public static void checkVisibilityOfAndTextToBePresentInElement(WebDriver driver, WebElement element) {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(3));
         wait.until(ExpectedConditions.visibilityOf(element));
@@ -52,5 +55,4 @@ public class Lab29_Wait_Helper {
         });
         return error_message;
     }
-
 }
